@@ -19,6 +19,7 @@ avatar: /avatar.png
 # friendlink：友链，设置为 true 的同时在 data 中加入链接和描述
 toc:
   enable: true
+  number: false
   friendlink:
     enable: false
     data:
@@ -31,17 +32,16 @@ toc:
 
 # Footer Settings
 # ---------------
-since: 2017
+since: 2018
 
 links:
   enable: true
   data:
-    - url: https://github.com/fan-lv
+    - url: https://github.com/Devil-Z
       text: GitHub
-    - url: mailto:15757856604@163.com
+    - url: mailto:superheaoz@hotmail.com
       text: E-Mail
-    - url: tencent://message/?uin=1019593584&Site=&Menu=yes
-      text: QQ
+
 
 # busuanzi count for PV / UV in site
 busuanzi:
