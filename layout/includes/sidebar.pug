@@ -3,8 +3,21 @@
     -
         let tocNumber
         if (page.toc_number !== undefined) tocNumber = page.toc_number
-        else if (theme.toc.number !== undefined) tocNumber = theme.toc.number
+        else if (config.toc !== undefined&&config.toc.number !== undefined) tocNumber = config.toc.number
+        else if (theme.toc !== undefined&&theme.toc.number !== undefined) tocNumber = theme.toc.number
         else tocNumber = true
+    -
+        let linksenable
+        let linksdata
+        if(config.links!==undefined&&config.links.enable!==undefined&&config.links.enable&&config.links.data!==undefined&&config.links.data.length>0){
+            linksdata=config.links.data
+            linksenable=true
+        }
+        else if(theme.links!==undefined&&theme.links.enable!==undefined&&theme.links.enable&&theme.links.data!==undefined&&theme.links.data.length>0){
+            linksdata=theme.links.data
+            linksenable=true
+        }
+        else linksenable=false
     if(showToc)
         .toggle-sidebar-info.button-hover
             span(data-toggle= _p('sidebar.toc'))= _p('sidebar.overview')
@@ -21,9 +34,9 @@
             img.author-info-avatar-img(src=theme.avatar || url_for('/images/avatar.png'))
         .author-info-name= config.author
         .author-info-description= config.description
-        if theme.links && theme.links.enable && theme.links.data.length>0
+        if linksenable
             .links-buttons
-                each item in theme.links.data
+                each item in linksdata
                     a.links-button.button-hover(href=item.url target="_blank")= item.text
                         i.icon-dot(class="bg-color" + Math.round(Math.random()*10))
         .author-info-articles

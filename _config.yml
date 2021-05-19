@@ -32,7 +32,13 @@ toc:
 
 # Footer Settings
 # ---------------
-since: 2018
+footer:
+  since:
+    enable: true
+    year: 2018
+  beian:
+    enable: true
+    icp: 豫ICP备17022618号
 
 links:
   enable: true
@@ -108,6 +114,6 @@ post_copyright:
 
 # 评论
 comments:
-  enable: true
+  enable: false
   # 使用哪种评论插件["gitment", "valine"]
   type: "valine"

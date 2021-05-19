@@ -14,12 +14,12 @@ script(type="text/x-mathjax-config").
         tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
     });
 
-script.
-    var isPassword = '!{page.password}' || false;
-    if (isPassword) {
-        if (prompt('请输入文章密码') !== '!{page.password}') {
-            alert('密码错误！');
-            history.back();
-        }
-    }
+//- script.
+//-     var isPassword = '!{page.password}' || false;
+//-     if (isPassword) {
+//-         if (prompt('请输入文章密码') !== '!{page.password}') {
+//-             alert('密码错误！');
+//-             history.back();
+//-         }
+//-     }
 
